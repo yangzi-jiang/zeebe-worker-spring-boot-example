@@ -15,10 +15,10 @@ import java.time.Instant;
 @SpringBootApplication
 @EnableZeebeClient
 @Slf4j
-public class DemoApplication {
+public class PricingApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(PricingApplication.class, args);
     }
 
     @ZeebeWorker(type = "classify", name = "main-worker")

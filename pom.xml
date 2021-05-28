@@ -11,8 +11,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>pricing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pricing</name>
-	<description>pricing service mock with Zeebe</description>
+	<name>customer</name>
+	<description>Customer service mock with Zeebe</description>
 
 	<properties>
 		<java.version>11</java.version>

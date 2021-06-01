@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>customer</artifactId>
+    <artifactId>pricing</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>customer</name>
-    <description>Customer service mock with Zeebe</description>
+    <name>pricing</name>
+    <description>Pricing service mock with Zeebe</description>
 
     <properties>
         <java.version>11</java.version>

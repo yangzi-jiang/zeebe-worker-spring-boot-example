@@ -1,9 +1,7 @@
-package io.flowing.retail.kafka.order.messages;
+package com.example.demo.messages;
 
 import java.util.Date;
 import java.util.UUID;
-
-import org.springframework.beans.factory.annotation.Value;
 
 public class Message<T> {
 

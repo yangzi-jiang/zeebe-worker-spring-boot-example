@@ -1,8 +1,16 @@
-package io.flowing.retail.kafka.order.messages;
+package com.example.demo.messages;
 
-import java.io.IOException;
-import java.util.Collections;
-
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.camunda.zeebe.client.ZeebeClient;
+import io.flowing.retail.kafka.order.domain.Order;
+import io.flowing.retail.kafka.order.flow.OrderFlowContext;
+import io.flowing.retail.kafka.order.flow.payload.GoodsFetchedEventPayload;
+import io.flowing.retail.kafka.order.flow.payload.GoodsShippedEventPayload;
+import io.flowing.retail.kafka.order.flow.payload.PaymentReceivedEventPayload;
+import io.flowing.retail.kafka.order.persistence.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -10,18 +18,8 @@ import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import io.flowing.retail.kafka.order.domain.Order;
-import io.flowing.retail.kafka.order.flow.OrderFlowContext;
-import io.flowing.retail.kafka.order.flow.payload.GoodsFetchedEventPayload;
-import io.flowing.retail.kafka.order.flow.payload.GoodsShippedEventPayload;
-import io.flowing.retail.kafka.order.flow.payload.PaymentReceivedEventPayload;
-import io.flowing.retail.kafka.order.persistence.OrderRepository;
-import io.camunda.zeebe.client.ZeebeClient;
+import java.io.IOException;
+import java.util.Collections;
 
 @Component
 @EnableBinding(Sink.class)
